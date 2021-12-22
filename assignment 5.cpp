@@ -27,4 +27,33 @@ else{
             }
         }
     }
-
+int main()
+{
+    int i;
+    string str;
+    cin>>str;
+    char s[10]="",ss[10]="";
+    for(i=0;i<=2;i++)
+    {
+        s[i]+=str[i];
+        ss[i]+=str[i];
+    }
+    for(i=3;str[i]!='\0';i++)
+    {
+        if(str[i]=='|')
+        {
+            break;
+        }
+        s[i]+=str[i];
+    }
+    s[i]='\0';
+    int j=3;
+    for(i=i+1;str[i]!='\0';i++)
+    {
+        ss[j]+=str[i];
+        j++;
+    }
+    ss[j]+='\0';
+    recursion(s);
+    recursion(ss);
+}
